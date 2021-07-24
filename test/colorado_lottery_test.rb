@@ -12,6 +12,8 @@ class ColoradoLotteryTest < Minitest::Test
   end
 
   def test_it_starts_with_no_registered_contestants
+    lottery = ColoradoLottery.new
+    
     assert_empty(lottery.registered_contestants)
   end
 end
