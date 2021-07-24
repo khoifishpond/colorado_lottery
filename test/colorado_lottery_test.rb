@@ -74,5 +74,6 @@ class ColoradoLotteryTest < Minitest::Test
 
     assert(lottery.interested_and_18?(alexander, pick_4))
     refute(lottery.interested_and_18?(benjamin, mega_millions))
+    refute(lottery.interested_and_18?(alexander, cash_5))
   end
 end
