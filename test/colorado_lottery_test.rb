@@ -33,6 +33,7 @@ class ColoradoLotteryTest < Minitest::Test
   end
 
   def test_it_checks_interest_and_18_or_older
+    lottery = ColoradoLottery.new
     pick_4 = Game.new('Pick 4', 2)
     mega_millions = Game.new('Mega Millions', 5, true)
     cash_5 = Game.new('Cash 5', 1)
