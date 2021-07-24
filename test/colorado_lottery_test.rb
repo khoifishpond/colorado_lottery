@@ -77,7 +77,7 @@ class ColoradoLotteryTest < Minitest::Test
     refute(lottery.interested_and_18?(alexander, cash_5))
   end
 
-  def test_it_can_register_contestants
+  def test_if_contestants_can_register
     lottery = ColoradoLottery.new
     pick_4 = Game.new('Pick 4', 2)
     mega_millions = Game.new('Mega Millions', 5, true)
