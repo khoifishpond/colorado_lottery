@@ -32,7 +32,7 @@ class ColoradoLotteryTest < Minitest::Test
     assert_kind_of(Hash, lottery.current_contestants)
   end
 
-  def test_it_checks_if_18_or_older
+  def test_it_checks_interest_and_18_or_older
     pick_4 = Game.new('Pick 4', 2)
     mega_millions = Game.new('Mega Millions', 5, true)
     cash_5 = Game.new('Cash 5', 1)
