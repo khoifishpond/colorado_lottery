@@ -22,4 +22,12 @@ class GameTest < Minitest::Test
 
     assert_equal(5, mega_millions.cost)
   end
+
+  def test_it_is_a_national_drawing?
+    pick_4 = Game.new('Pick 4', 2)
+    mega_millions = Game.new('Mega Millions', 5, true)
+
+    assert(mega_millions.national_drawing?)
+    refute(pick_4.national_drawing?)
+  end
 end
