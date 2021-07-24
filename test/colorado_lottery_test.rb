@@ -10,4 +10,8 @@ class ColoradoLotteryTest < Minitest::Test
 
     assert_instance_of(ColoradoLottery, lottery)
   end
+
+  def test_it_starts_with_no_registered_contestants
+    assert_empty(lottery.registered_contestants)
+  end
 end
