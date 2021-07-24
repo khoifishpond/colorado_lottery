@@ -8,4 +8,8 @@ class Contestant
     @state_of_residence = params[:state_of_residence]
     @spending_money = params[:spending_money]
   end
+
+  def full_name
+    @first_name + " " + @last_name
+  end
 end
