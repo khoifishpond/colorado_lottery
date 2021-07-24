@@ -22,6 +22,6 @@ class ColoradoLotteryTest < Minitest::Test
     lottery = ColoradoLottery.new
 
     assert_empty(lottery.registered_contestants)
-    assert_kind_of(Array, lottery.registered_contestants)
+    assert_kind_of(Array, lottery.winners)
   end
 end
