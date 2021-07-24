@@ -118,5 +118,6 @@ class ColoradoLotteryTest < Minitest::Test
     benjamin.add_game_interests('Mega Millions')
 
     assert(lottery.can_register?(alexander, pick_4))
+    refute(lottery.can_register?(alexander, cash_5))
   end
 end
