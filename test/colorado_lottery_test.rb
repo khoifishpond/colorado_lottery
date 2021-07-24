@@ -121,5 +121,6 @@ class ColoradoLotteryTest < Minitest::Test
     refute(lottery.can_register?(alexander, cash_5))
     assert(lottery.can_register?(frederick, mega_millions))
     refute(lottery.can_register?(benjamin, mega_millions))
+    refute(lottery.can_register?(frederick, cash_5))
   end
 end
