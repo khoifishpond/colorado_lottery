@@ -10,4 +10,10 @@ class GameTest < Minitest::Test
     assert_instance_of(Game, pick_4)
     assert_instance_of(Game, mega_millions)
   end
+
+  def test_it_has_a_name
+    mega_millions = Game.new('Mega Millions', 5, true)
+
+    assert_equal('Mega Millions', mega_millions.name)
+  end
 end
