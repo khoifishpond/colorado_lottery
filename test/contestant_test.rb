@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/contestant'
+require './lib/game'
 
 class ContestantTest < Minitest::Test
   def test_it_exists
@@ -83,7 +84,21 @@ class ContestantTest < Minitest::Test
       state_of_residence: 'CO',
       spending_money: 10
     })
-    
+
     assert_empty(alexander.game_interests)
+  end
+
+  def test_can_add_game_interests
+    alexander = Contestant.new({
+      first_name: 'Alexander',
+      last_name: 'Aigiades',
+      age: 28,
+      state_of_residence: 'CO',
+      spending_money: 10
+    })
+    alexander.add_game_interests('Mega Millions')
+    alexander.add_game_interests('Pick 4')
+
+    assert_equal(['Mega Millions', 'Pick 4'], alexander.game_interests)
   end
 end
