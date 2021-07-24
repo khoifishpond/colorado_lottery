@@ -26,4 +26,16 @@ class ContestantTest < Minitest::Test
 
     assert_equal('Alexander Aigiades', alexander.full_name)
   end
+
+  def test_has_an_age
+    alexander = Contestant.new({
+      first_name: 'Alexander',
+      last_name: 'Aigiades',
+      age: 28,
+      state_of_residence: 'CO',
+      spending_money: 10
+    })
+
+    assert_equal(28, alexander.age)
+  end
 end
