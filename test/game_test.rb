@@ -16,4 +16,10 @@ class GameTest < Minitest::Test
 
     assert_equal('Mega Millions', mega_millions.name)
   end
+
+  def test_it_has_a_cost
+    mega_millions = Game.new('Mega Millions', 5, true)
+
+    assert_equal(5, mega_millions.cost)
+  end
 end
