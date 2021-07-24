@@ -74,4 +74,8 @@ class ContestantTest < Minitest::Test
 
     assert(alexander.state_of_residence)
   end
+
+  def test_starts_with_no_game_interests
+    assert_equal([], alexander.game_interests)
+  end
 end
