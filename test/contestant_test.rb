@@ -72,6 +72,6 @@ class ContestantTest < Minitest::Test
       spending_money: 10
     })
 
-    refute(alexander.state_of_residence)
+    assert(alexander.state_of_residence)
   end
 end
