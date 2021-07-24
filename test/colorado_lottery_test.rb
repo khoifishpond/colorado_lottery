@@ -1,6 +1,7 @@
 require 'minitest/autorun'
+require 'minitest/pride'
 require './lib/colorado_lottery'
-require './lib/contest'
+require './lib/contestant'
 require './lib/game'
 
 class ColoradoLotteryTest < Minitest::Test
