@@ -17,4 +17,11 @@ class ColoradoLotteryTest < Minitest::Test
     assert_empty(lottery.registered_contestants)
     assert_kind_of(Hash, lottery.registered_contestants)
   end
+
+  def test_it_starts_with_no_winners
+    lottery = ColoradoLottery.new
+
+    assert_empty(lottery.registered_contestants)
+    assert_kind_of(Array, lottery.registered_contestants)
+  end
 end
