@@ -12,4 +12,8 @@ class Contestant
   def full_name
     @first_name + " " + @last_name
   end
+
+  def out_of_state?
+    @state_of_residence == 'CO'
+  end
 end
