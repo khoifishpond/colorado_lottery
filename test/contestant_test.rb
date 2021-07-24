@@ -76,6 +76,14 @@ class ContestantTest < Minitest::Test
   end
 
   def test_starts_with_no_game_interests
-    assert_equal([], alexander.game_interests)
+    alexander = Contestant.new({
+      first_name: 'Alexander',
+      last_name: 'Aigiades',
+      age: 28,
+      state_of_residence: 'CO',
+      spending_money: 10
+    })
+    
+    assert_empty(alexander.game_interests)
   end
 end
