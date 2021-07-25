@@ -26,4 +26,8 @@ class Contestant
   def add_game_interests(game)
     @game_interests << game
   end
+
+  def charge(game)
+    @spending_money -= game.cost
+  end
 end
