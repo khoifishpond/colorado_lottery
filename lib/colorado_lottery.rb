@@ -19,7 +19,8 @@ class ColoradoLottery
 
   def register_contestant(contestant, game)
     if can_register?(contestant, game)
-      @registered_contestants[game.name] = contestant
+      @registered_contestants[game.name] ||= []
+      @registered_contestants[game.name] << contestant
     end
   end
 end
