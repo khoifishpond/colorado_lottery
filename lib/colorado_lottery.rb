@@ -37,4 +37,9 @@ class ColoradoLottery
       end
     end
   end
+
+  def draw_winners
+    # idk just cuz
+    "2020-04-07"
+  end
 end
