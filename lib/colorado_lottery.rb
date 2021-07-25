@@ -14,7 +14,7 @@ class ColoradoLottery
   end
 
   def can_register?(contestant, game)
-    interested_and_18?(contestant, game)
+    interested_and_18?(contestant, game) && game.national_drawing? || interested_and_18?(contestant, game) && contestant.out_of_state? == false
   end
 
   def register_contestant(contestant, game)
@@ -58,7 +58,7 @@ class ColoradoLottery
     name = @current_contestants[game_selection(game_name)].sample
     winner[name] = game_name
     @winners << winner
-    
+
     "#{name} won the #{game_name} on #{draw_month_day[1]}/#{draw_month_day[2]}"
   end
 end
