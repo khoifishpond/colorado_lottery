@@ -185,5 +185,28 @@ class ColoradoLotteryTest < Minitest::Test
       },
       lottery.registered_contestants
     )
+
+    grace = Contestant.new({
+      first_name: 'Grace',
+      last_name: 'Hopper',
+      age: 20,
+      state_of_residence: 'CO',
+      spending_money: 20
+    })
+
+    grace.add_game_interests('Mega Millions')
+    grace.add_game_interests('Cash 5')
+    grace.add_game_interests('Pick 4')
+    lottery.register_contestant(grace, mega_millions)
+    lottery.register_contestant(grace, cash_5)
+    lottery.register_contestant(grace, pick_4)
+
+    assert_equal({
+      "Pick 4" => [alexander, grace],
+      "Mega Millions" => [alexander, frederick, winston, grace],
+      "Cash 5" => [winston, grace]
+      },
+      lottery.registered_contestants
+    )
   end
 end
