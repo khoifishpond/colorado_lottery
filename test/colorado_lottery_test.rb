@@ -268,5 +268,6 @@ class ColoradoLotteryTest < Minitest::Test
     lottery.register_contestant(grace, pick_4)
 
     assert_equal([alexander, grace], lottery.eligible_contestants(pick_4))
+    assert_equal([winston, grace], lottery.eligible_contestants(cash_5))
   end
 end
