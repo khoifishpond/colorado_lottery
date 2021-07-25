@@ -269,5 +269,9 @@ class ColoradoLotteryTest < Minitest::Test
 
     assert_equal([alexander, grace], lottery.eligible_contestants(pick_4))
     assert_equal([winston, grace], lottery.eligible_contestants(cash_5))
+    assert_equal(
+      [alexander, frederick, winston, grace],
+      lottery.eligible_contestants(mega_millions)
+    )
   end
 end
