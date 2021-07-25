@@ -16,4 +16,10 @@ class ColoradoLottery
   def can_register?(contestant, game)
     interested_and_18?(contestant, game)
   end
+
+  def register_contestant(contestant, game)
+    if can_register?(contestant, game)
+      @registered_contestants[game.name] = contestant
+    end
+  end
 end
