@@ -413,5 +413,20 @@ class ColoradoLotteryTest < Minitest::Test
       },
       lottery.current_contestants
     )
+    assert_equal(14, grace.spending_money)
+    assert_equal(4, winston.spending_money)
+    assert_equal(5, alexander.spending_money)
+    assert_equal(15, frederick.spending_money)
+
+    lottery.charge_contestants(pick_4)
+
+    assert_equal(
+      {
+        cash_5 => ["Winston Churchill", "Grace Hopper"],
+        mega_millions => ["Alexander Aigades", "Frederick Douglas", "Grace Hopper"],
+        pick_4 => ["Alexander Aigades", "Grace Hopper"]
+      },
+      lottery.current_contestants
+    )
   end
 end
