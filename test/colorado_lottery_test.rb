@@ -167,10 +167,10 @@ class ColoradoLotteryTest < Minitest::Test
     lottery.register_contestant(alexander, pick_4)
 
     assert_equal({"Pick 4" => [alexander]}, lottery.registered_contestants)
-    assert_equal({
-      "Pick 4" => [alexander],
-      "Mega Millions" => [alexander]
-      },
+
+    lottery.register_contestant(alexander, mega_millions)
+
+    assert_equal({"Pick 4" => [alexander], "Mega Millions" => [alexander]},
       lottery.registered_contestants
     )
   end
