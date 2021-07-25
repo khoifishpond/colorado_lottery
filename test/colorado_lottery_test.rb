@@ -429,4 +429,10 @@ class ColoradoLotteryTest < Minitest::Test
       lottery.current_contestants
     )
   end
+
+  def test_it_can_draw_winners
+    lottery = ColoradoLottery.new
+    
+    assert_equal("2020-04-07", lottery.draw_winners)
+  end
 end
